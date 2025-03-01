@@ -1,6 +1,6 @@
 # 🏆 My Workshop Certificates
 
-![Certificate Showcase](https://cdn-icons-png.flaticon.com/512/3063/3063821.png)
+![Certificate Showcase](https://i.pinimg.com/474x/13/fd/04/13fd047d2bc502deade52c229ff90e4f.jpg)
 
 Welcome to my **Workshop Certificates** folder! Here, I have uploaded the certificates I have earned from various workshops.
 
