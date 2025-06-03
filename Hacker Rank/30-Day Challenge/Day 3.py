@@ -7,38 +7,43 @@ import re
 import sys
 
 #
-# Complete the 'diagonalDifference' function below.
+# Complete the 'matchingStrings' function below.
 #
-# The function is expected to return an INTEGER.
-# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. STRING_ARRAY stringList
+#  2. STRING_ARRAY queries
 #
 
-def diagonalDifference(arr):
-    fsum=0
-    ssum=0
-    for i in range (0,n):
-        for j in range (0,n):
-            if i==j:
-                fsum=fsum+arr[i][j]
-    for i in range (0,n):
-        for j in range (0,n):
-            if j==(n-i-1):
-                ssum=ssum+arr[i][j]
-    fanswer=abs(fsum-ssum)
-    return fanswer
+def matchingStrings(stringList, queries):
+    # Write your code here
+    rs = []
+    for i in queries:
+        rs.append(stringList.count(i))
+    return rs
 
 if _name_ == '_main_':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
+    stringList_count = int(input().strip())
 
-    arr = []
+    stringList = []
 
-    for _ in range(n):
-        arr.append(list(map(int, input().rstrip().split())))
+    for _ in range(stringList_count):
+        stringList_item = input()
+        stringList.append(stringList_item)
 
-    result = diagonalDifference(arr)
+    queries_count = int(input().strip())
 
-    fptr.write(str(result) + '\n')
+    queries = []
+
+    for _ in range(queries_count):
+        queries_item = input()
+        queries.append(queries_item)
+
+    res = matchingStrings(stringList, queries)
+
+    fptr.write('\n'.join(map(str, res)))
+    fptr.write('\n')
 
     fptr.close()
